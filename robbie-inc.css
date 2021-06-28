@@ -1,0 +1,39 @@
+.main-hero {
+  background-image: url("./images/IMG_7809.jpg");
+}
+
+.hero {
+  height: 100vh; /* 100vh means 100% of the screen height */
+  min-width: 100vw; /*100vw means 100% of the screen width. We want the hero to at least be that wide. */
+  background-position: center; /* background image should be centered */
+  background-size: cover; /* background image should fill the space */
+  color: white; /* "color" changes text color inside this element */
+
+  /*We're going to center the text and stuff using "flex", cheatsheet here: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /*Since the overlay is position:absolute, we want the hero containing it to be position:relative so the overlay is relative to the hero. */
+  position: relative;
+}
+
+.hero .overlay {
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+}
+
+.hero .hero-content {
+  z-index: 1;
+
+  /*centering stuff*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
